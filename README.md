@@ -24,6 +24,16 @@ my.org.BatchPersistableEvaluatorResult@46761362
 [INFO] [CoreWorkflow$] runEvaluation completed
 ```
 
+You can find the result under `batch_result`
+
+```
+$ ls batch_result/
+_SUCCESS	part-00000	part-00001	part-00002	part-00003	part-00004	part-00005	part-00006	part-00007
+$ cat batch_result/part-00001 
+{"query":{"features":[50.0,40.0,30.0]},"predictedResult":{"label":2.0}}
+```
+
+
 # PredictionIO Evaluation Module Explained
 
 When we run `pio eval`, the first parameter is the static object for the
